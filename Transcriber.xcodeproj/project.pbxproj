@@ -14,6 +14,9 @@
 		A426C6BC2B40F3F1006106C9 /* TranscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6BB2B40F3F1006106C9 /* TranscriberTests.swift */; };
 		A426C6C62B40F3F1006106C9 /* TranscriberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6C52B40F3F1006106C9 /* TranscriberUITests.swift */; };
 		A426C6C82B40F3F1006106C9 /* TranscriberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6C72B40F3F1006106C9 /* TranscriberUITestsLaunchTests.swift */; };
+		A426C6D62B40F9CF006106C9 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D52B40F9CF006106C9 /* RecordButton.swift */; };
+		A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
+		A426C6DA2B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		A426C6C12B40F3F1006106C9 /* TranscriberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranscriberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A426C6C52B40F3F1006106C9 /* TranscriberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITests.swift; sourceTree = "<group>"; };
 		A426C6C72B40F3F1006106C9 /* TranscriberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A426C6D52B40F9CF006106C9 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		A426C6D82B410322006106C9 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,8 @@
 		A426C6A92B40F3F0006106C9 /* Transcriber */ = {
 			isa = PBXGroup;
 			children = (
+				A426C6D72B410221006106C9 /* Models */,
+				A426C6D42B40F917006106C9 /* Views */,
 				A426C6AA2B40F3F0006106C9 /* TranscriberApp.swift */,
 				A426C6AC2B40F3F0006106C9 /* ContentView.swift */,
 				A426C6AE2B40F3F1006106C9 /* Assets.xcassets */,
@@ -125,6 +132,22 @@
 				A426C6C72B40F3F1006106C9 /* TranscriberUITestsLaunchTests.swift */,
 			);
 			path = TranscriberUITests;
+			sourceTree = "<group>";
+		};
+		A426C6D42B40F917006106C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A426C6D52B40F9CF006106C9 /* RecordButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A426C6D72B410221006106C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A426C6D82B410322006106C9 /* SpeechRecognizer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A426C6AD2B40F3F0006106C9 /* ContentView.swift in Sources */,
+				A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */,
 				A426C6AB2B40F3F0006106C9 /* TranscriberApp.swift in Sources */,
+				A426C6D62B40F9CF006106C9 /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A426C6BC2B40F3F1006106C9 /* TranscriberTests.swift in Sources */,
+				A426C6DA2B410322006106C9 /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
