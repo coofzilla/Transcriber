@@ -9,28 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isRecording = false
+    @StateObject var speechRecognizer = SpeechRecognizer()
 
     var body: some View {
         VStack {
             Spacer()
-
-            // TODO: Placeholder for the text display box
-            Text("Text Display Box")
-                .frame(maxWidth: .infinity, minHeight: 150)
-                .background(Color.gray.opacity(0.3))
-                .padding()
-
-            // TODO: Placeholder for audio wave box
-            Text("Audio Wave Box")
-                .frame(maxWidth: .infinity, minHeight: 150)
-                .background(Color.gray.opacity(0.3))
-                .padding()
-
-            Spacer()
+            ScrollView {
+                Text("Transcribed Text:")
+                    .font(.largeTitle)
+                Text(speechRecognizer.transcript)
+                    .padding()
+            }
+            .frame(maxWidth: .infinity, minHeight: 150)
+            .background(Color.gray.opacity(0.3))
 
             HStack {
                 Spacer()
-                RecordButton(isRecording: $isRecording)
+                RecordButton(isRecording: $isRecording) {
+                    if isRecording {
+                        startRecording()
+                    } else {
+                        stopRecording()
+                    }
+                }
                 Spacer()
             }
             .scenePadding(.top)
@@ -40,6 +41,15 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
         .edgesIgnoringSafeArea(.horizontal)
+    }
+
+    private func startRecording() {
+        speechRecognizer.resetTranscript()
+        speechRecognizer.startTranscribing()
+    }
+
+    private func stopRecording() {
+        speechRecognizer.stopTranscribing()
     }
 }
 

@@ -10,10 +10,13 @@ import SwiftUI
 struct RecordButton: View {
     @Binding var isRecording: Bool
 
+    let onPress: () -> Void
+
     var body: some View {
         Button(action: {
             withAnimation {
                 isRecording.toggle()
+                onPress()
             }
         }) {
             ZStack {
@@ -31,7 +34,7 @@ struct RecordButton: View {
 
 #Preview {
     HStack {
-        RecordButton(isRecording: .constant(false))
+        RecordButton(isRecording: .constant(false)) { print("PRESSED PREVIEW") }
     }
     .background(Color.black)
     .frame(width: 100, height: 100)

@@ -17,6 +17,7 @@
 		A426C6D62B40F9CF006106C9 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D52B40F9CF006106C9 /* RecordButton.swift */; };
 		A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
 		A426C6DA2B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
+		A429CEDB2B672A6200345966 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429CEDA2B672A6200345966 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A426C6C72B40F3F1006106C9 /* TranscriberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A426C6D52B40F9CF006106C9 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		A426C6D82B410322006106C9 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		A429CEDA2B672A6200345966 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A426C6D82B410322006106C9 /* SpeechRecognizer.swift */,
+				A429CEDA2B672A6200345966 /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */,
 				A426C6AB2B40F3F0006106C9 /* TranscriberApp.swift in Sources */,
 				A426C6D62B40F9CF006106C9 /* RecordButton.swift in Sources */,
+				A429CEDB2B672A6200345966 /* History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +455,8 @@
 				DEVELOPMENT_TEAM = VKVRFXK4QK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe speech. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view text transcription of recorded audio. Audio recordings discard after transcription.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,6 +486,8 @@
 				DEVELOPMENT_TEAM = VKVRFXK4QK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe speech. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view text transcription of recorded audio. Audio recordings discard after transcription.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
