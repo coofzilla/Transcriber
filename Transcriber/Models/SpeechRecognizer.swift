@@ -40,7 +40,7 @@ actor SpeechRecognizer: ObservableObject {
      */
 
     init() {
-        recognizer = SFSpeechRecognizer()
+        recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
         guard recognizer != nil else {
             transcribe(RecognizerError.nilRecognizer)
             return
