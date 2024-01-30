@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isRecording = false
-    @StateObject var speechRecognizer = SpeechRecognizer()
+    @StateObject var viewModel = TranscriptViewModel()
 
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct ContentView: View {
             ScrollView {
                 Text("Transcribed Text:")
                     .font(.largeTitle)
-                Text(speechRecognizer.transcript)
+                Text(viewModel.transcript)
                     .padding()
             }
             .frame(maxWidth: .infinity, minHeight: 150)
@@ -28,6 +28,7 @@ struct ContentView: View {
                 RecordButton(isRecording: $isRecording) {
                     if isRecording {
                         startRecording()
+
                     } else {
                         stopRecording()
                     }
@@ -44,12 +45,11 @@ struct ContentView: View {
     }
 
     private func startRecording() {
-        speechRecognizer.resetTranscript()
-        speechRecognizer.startTranscribing()
+        viewModel.startTranscribing()
     }
 
     private func stopRecording() {
-        speechRecognizer.stopTranscribing()
+        viewModel.stopTranscribing()
     }
 }
 

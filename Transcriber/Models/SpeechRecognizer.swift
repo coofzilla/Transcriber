@@ -6,6 +6,7 @@
 //
 
 import AVFoundation
+import Combine
 import Foundation
 import Speech
 import SwiftUI
@@ -28,6 +29,7 @@ actor SpeechRecognizer: ObservableObject {
     }
 
     @MainActor var transcript: String = ""
+    let transcriptUpdates = PassthroughSubject<String, Never>()
 
     private var audioEngine: AVAudioEngine?
     private var request: SFSpeechAudioBufferRecognitionRequest?
@@ -144,6 +146,7 @@ actor SpeechRecognizer: ObservableObject {
 
         if let result {
             transcribe(result.bestTranscription.formattedString)
+            transcriptUpdates.send(result.bestTranscription.formattedString)
         }
     }
 
