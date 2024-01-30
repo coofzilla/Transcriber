@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isRecording = false
-    @StateObject var viewModel = TranscriptViewModel()
+    @StateObject private var speechRecognizer = SpeechRecognizer()
 
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct ContentView: View {
             ScrollView {
                 Text("Transcribed Text:")
                     .font(.largeTitle)
-                Text(viewModel.transcript)
+                Text(verbatim: speechRecognizer.transcript)
                     .padding()
             }
             .frame(maxWidth: .infinity, minHeight: 150)
@@ -45,11 +45,12 @@ struct ContentView: View {
     }
 
     private func startRecording() {
-        viewModel.startTranscribing()
+        speechRecognizer.resetTranscript()
+        speechRecognizer.startTranscribing()
     }
 
     private func stopRecording() {
-        viewModel.stopTranscribing()
+        speechRecognizer.stopTranscribing()
     }
 }
 

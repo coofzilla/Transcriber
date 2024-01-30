@@ -18,7 +18,6 @@
 		A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
 		A426C6DA2B410322006106C9 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426C6D82B410322006106C9 /* SpeechRecognizer.swift */; };
 		A429CEDB2B672A6200345966 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429CEDA2B672A6200345966 /* History.swift */; };
-		A429CEDE2B68ABE900345966 /* TranscriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429CEDD2B68ABE900345966 /* TranscriptViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		A426C6D52B40F9CF006106C9 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		A426C6D82B410322006106C9 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		A429CEDA2B672A6200345966 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		A429CEDD2B68ABE900345966 /* TranscriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 		A426C6A92B40F3F0006106C9 /* Transcriber */ = {
 			isa = PBXGroup;
 			children = (
-				A429CEDC2B68ABC700345966 /* ViewModel */,
 				A426C6D72B410221006106C9 /* Models */,
 				A426C6D42B40F917006106C9 /* Views */,
 				A426C6AA2B40F3F0006106C9 /* TranscriberApp.swift */,
@@ -154,14 +151,6 @@
 				A429CEDA2B672A6200345966 /* History.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A429CEDC2B68ABC700345966 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A429CEDD2B68ABE900345966 /* TranscriptViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A429CEDE2B68ABE900345966 /* TranscriptViewModel.swift in Sources */,
 				A426C6AD2B40F3F0006106C9 /* ContentView.swift in Sources */,
 				A426C6D92B410322006106C9 /* SpeechRecognizer.swift in Sources */,
 				A426C6AB2B40F3F0006106C9 /* TranscriberApp.swift in Sources */,
